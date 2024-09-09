@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  /*Body styling*/
+  body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:#BB8493;
+  }
+  /*Container Styling */
+  .container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    background: #704264;
+    padding: 30px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /*Heading Styling */
+  .heading {
+    text-align: center;
+    font-size: 40px;
+    color: #e1b5a8;
+    margin-bottom: 50px;
+  }
+  
+  /*Label styling */
+  label {
+    display: block;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  /* Select Drop down Styling */
+  select {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    text-transform: capitalize;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    background: #fff;
+    color: #021526;
+    font-size: 14px;
+  }
+  
+  /*start button styling */
+  .start-screen .btn {
+    margin-top: 50px;
+  }
+  /*Hide class*/
+  .hide {
+    display: none;
+  }
+  
+  /*Timer styling */
+  .timer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 30px;
+  }
+  .timer .progress {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border-radius: 30px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    border: 3px solid #ced2de;
+  }
+  /* Style to show  gradient background and smooth transition */
+  .timer .progress .progress-bar {
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    overflow: hidden;
+    background: linear-gradient(to right, #903c6d, #cb5ed9);
+    transition: 1s linear;
+  }
+  .timer .progress .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  /*Question wrapper styling */
+  .question-wrapper .number {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  .question-wrapper .number .total {
+    color: #fff;
+    font-size: 18px;
+  }
+  .question-wrapper .question {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  
+  /*Answer wrapper styling */ 
+  .answer-wrapper .answer {
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    border: 3px solid #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+  .answer .checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 3px solid #F0A8D0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+  }
+  .answer .checkbox i {
+    color: #fff;
+    font-size: 10px;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  .answer:hover:not(.checked) .checkbox,
+  .answer.selected .checkbox {
+    background-color: #FF8C9E;
+    border-color: #FF8C9E;
+  }
+  .answer.selected .checkbox i {
+    opacity: 1;
+  }
+  .answer.correct {
+      border-color: #1bbf1a ;
+  }
+  .answer.wrong {
+    border-color: #970f0f;
+  }
+  .question-wrapper,
+  .answer-wrapper {
+    margin-bottom: 50px;
+  }
+  
+  /*Button styling */
+  .btn {
+    width: 100%;
+    height: 60px;
+    background: #E3A5C7;
+    border: none;
+    border-radius: 10px;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s linear;
+  }
+  .btn:hover {
+    background: #C75B7A;
+  }
+  .btn:disabled {
+    background: #ca8198;
+    cursor: not-allowed;
+  }
+  .btn.next {
+    display: none;
+  }
+  /* End screen styling */
+  .end-screen .score {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 80px;
+    text-align: center;
+  }
+  .score .score-text {
+    color: #ecedee;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 120px;
+  }
+  
+  @media (max-width: 468px) {
+    .container {
+      min-height: 100vh;
+      max-width: 100%;
+      border-radius: 0;
+    }
+  }
